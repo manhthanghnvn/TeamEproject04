@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("header.ejs") %>
+</head>
+<body>
+<div>
+    <form acction="#" method="get">
+        <input class="login-form-container" type="text" name="products"/>
+        <button type = "submit" class="btn btn-primary">
+            <h3 data-speed="-2" class="home-parallax">find your car</h3>
+        </button>
+</div>
+<div class="sds-home-search">
+    <div class="sds-tabs" id="search-widget">
+        <ul class="sds-tabs__list" role="tablist">
+            <li role="presentation">
+                <a data-toggle="tab" role="tab" id="by-make" class="sds-tabs__link" aria-selected="true" data-activity-rule-type="custom" data-component="search-switch" data-linkname="search-widget-switch-make" tabindex="0">Make</a>
+            </li>
+            <li role="presentation">
+                <a data-toggle="tab" role="tab" id="by-body-style" class="sds-tabs__link" aria-selected="false" data-activity-rule-type="custom" data-component="search-switch" data-linkname="search-widget-switch-bodystyle" tabindex="0">Body style</a>
+            </li>
+        </ul>
+
+        <div class="sds-tabs__contents">
+            <form action="/shopping/results/" class="search-form" data-submittype="vehicle-search" method="get">
+                <div class="sds-tabs__section" role="tabpanel" id="by-make-tab" aria-labelledby="by-make">
+                    <div class="sds-field-group sds-field-group--melded sds-home-search__bymake">
+
+                        <div class="sds-field sds-home-search__type">
+                            <div class="sds-input-container sds-input-container--dropdown">
+                                <select class="sds-text-field" data-activitykey="stock-type" data-component="vehicle-search" id="make-model-search-stocktype" name="stock_type" aria-labelledby="ae-formFieldLabelOptIn_b3r8etky2n7_0"><option value="all">New &amp; used cars</option><option value="new_cpo">New &amp; certified cars</option><option value="new">New cars</option><option value="used">Used cars</option><option value="cpo">Certified cars</option></select>
+                                <label class="sds-label" for="stock_type" role="presentation" id="ae-formFieldLabelOptIn_b3r8etky2n7_0">New/used</label>
+                                <svg class="sds-text-field__icon" height="16" width="16" role="presentation" aria-hidden="true" tabindex="-1"><use xlink:href="/svg/spritemap-9957805ae2a418ae7507c2b0e074f33e.svg?vsn=d#chevron-down"></use></svg>
+                            </div>
+                        </div>
+
+                        <div class="sds-field sds-home-search__make">
+                            <div class="sds-input-container sds-input-container--dropdown">
+                                <select class="sds-text-field" data-activitykey="make" data-component="vehicle-search" id="makes" name="makes[]"><option value="">All makes</option><optgroup label="Popular makes"><option value="acura">Acura</option><option value="audi">Audi</option><option value="bmw">BMW</option><option value="buick">Buick</option><option value="cadillac">Cadillac</option><option value="chevrolet">Chevrolet</option><option value="chrysler">Chrysler</option><option value="dodge">Dodge</option><option value="ford">Ford</option><option value="gmc">GMC</option><option value="honda">Honda</option><option value="hyundai">Hyundai</option><option value="infiniti">INFINITI</option><option value="jaguar">Jaguar</option><option value="jeep">Jeep</option><option value="kia">Kia</option><option value="land_rover">Land Rover</option><option value="lexus">Lexus</option><option value="lincoln">Lincoln</option><option value="mazda">Mazda</option><option value="mercedes_benz">Mercedes-Benz</option><option value="mitsubishi">Mitsubishi</option><option value="nissan">Nissan</option><option value="porsche">Porsche</option><option value="ram">RAM</option><option value="subaru">Subaru</option><option value="tesla">Tesla</option><option value="toyota">Toyota</option><option value="volkswagen">Volkswagen</option><option value="volvo">Volvo</option></optgroup><optgroup label="Other makes"><option value="ac">AC</option><option value="alfa_romeo">Alfa Romeo</option><option value="am_general">Am General</option><option value="american_motors">American Motors</option><option value="aston_martin">Aston Martin</option><option value="austin_healey">Austin-Healey</option><option value="bentley">Bentley</option><option value="bugatti">Bugatti</option><option value="citroen">Citroen</option><option value="daewoo">Daewoo</option><option value="daihatsu">Daihatsu</option><option value="datsun">Datsun</option><option value="delorean">Delorean</option><option value="desoto">Desoto</option><option value="detomaso">DeTomaso</option><option value="eagle">Eagle</option><option value="edsel">Edsel</option><option value="ferrari">Ferrari</option><option value="fiat">FIAT</option><option value="fisker">Fisker</option><option value="genesis">Genesis</option><option value="geo">Geo</option><option value="hummer">Hummer</option><option value="international">International</option><option value="isuzu">Isuzu</option><option value="jensen">Jensen</option><option value="kaiser">Kaiser</option><option value="karma">Karma</option><option value="lamborghini">Lamborghini</option><option value="lasalle">LaSalle</option><option value="lotus">Lotus</option><option value="lucid">Lucid</option><option value="maserati">Maserati</option><option value="maybach">Maybach</option><option value="mclaren">McLaren</option><option value="mercury">Mercury</option><option value="mg">MG</option><option value="mini">MINI</option><option value="nash">Nash</option><option value="oldsmobile">Oldsmobile</option><option value="opel">Opel</option><option value="packard">Packard</option><option value="pagani">Pagani</option><option value="plymouth">Plymouth</option><option value="polestar">Polestar</option><option value="pontiac">Pontiac</option><option value="rolls_royce">Rolls-Royce</option><option value="saab">Saab</option><option value="saleen">Saleen</option><option value="saturn">Saturn</option><option value="scion">Scion</option><option value="smart">smart</option><option value="sterling">Sterling</option><option value="studebaker">Studebaker</option><option value="sunbeam">Sunbeam</option><option value="suzuki">Suzuki</option><option value="triumph">Triumph</option><option value="willys">Willys</option></optgroup></select>
+                                <label class="sds-label" for="makes">Make</label>
+                                <svg class="sds-text-field__icon" height="16" width="16" role="presentation" aria-hidden="true" tabindex="-1"><use xlink:href="/svg/spritemap-9957805ae2a418ae7507c2b0e074f33e.svg?vsn=d#chevron-down"></use></svg>
+                            </div>
+                        </div>
+
+                        <div class="sds-field sds-home-search__model">
+                            <div class="sds-input-container sds-input-container--dropdown">
+                                <select class="sds-text-field" data-activitykey="model" data-component="vehicle-search" id="models" name="models[]"><option value="">All models</option><option value="hyundai-accent">Accent</option><option value="hyundai-azera">Azera</option><option value="hyundai-elantra">Elantra</option><option value="hyundai-elantra_gt">Elantra GT</option><option value="hyundai-elantra_hev">Elantra HEV</option><option value="hyundai-elantra_n">Elantra N</option><option value="hyundai-elantra_touring">Elantra Touring</option><option value="hyundai-entourage">Entourage</option><option value="hyundai-equus">Equus</option><option value="hyundai-genesis">Genesis</option><option value="hyundai-genesis_coupe">Genesis Coupe</option><option value="hyundai-ioniq_5">IONIQ 5</option><option value="hyundai-ioniq_ev">IONIQ EV</option><option value="hyundai-ioniq_hybrid">IONIQ Hybrid</option><option value="hyundai-ioniq_plug_in_hybrid">IONIQ Plug-In Hybrid</option><option value="hyundai-kona">Kona</option><option value="hyundai-kona_ev">Kona EV</option><option value="hyundai-kona_n">Kona N</option><option value="hyundai-nexo">NEXO</option><option value="hyundai-palisade">Palisade</option><option value="hyundai-santa_cruz">Santa Cruz</option><option value="hyundai-santa_fe">Santa Fe</option><option value="hyundai-santa_fe_hev">Santa Fe HEV</option><option value="hyundai-santa_fe_plug_in_hybrid">Santa Fe Plug-In Hybrid</option><option value="hyundai-santa_fe_sport">Santa Fe Sport</option><option value="hyundai-santa_fe_xl">Santa Fe XL</option><option value="hyundai-sonata">Sonata</option><option value="hyundai-sonata_hybrid">Sonata Hybrid</option><option value="hyundai-sonata_plug_in_hybrid">Sonata Plug-In Hybrid</option><option value="hyundai-tiburon">Tiburon</option><option value="hyundai-tucson">Tucson</option><option value="hyundai-tucson_hybrid">Tucson Hybrid</option><option value="hyundai-tucson_plug_in_hybrid">Tucson Plug-In Hybrid</option><option value="hyundai-veloster">Veloster</option><option value="hyundai-veloster_n">Veloster N</option><option value="hyundai-venue">Venue</option><option value="hyundai-veracruz">Veracruz</option><option value="hyundai-xg350">XG350</option></select>
+                                <label class="sds-label" for="models">Model</label>
+                                <svg class="sds-text-field__icon" height="16" width="16" role="presentation" aria-hidden="true" tabindex="-1"><use xlink:href="/svg/spritemap-9957805ae2a418ae7507c2b0e074f33e.svg?vsn=d#chevron-down"></use></svg>
+                            </div>
+                        </div>
+
+                        <div class="sds-field sds-home-search__price">
+                            <div class="sds-input-container sds-input-container--dropdown">
+                                <select class="sds-text-field" data-activitykey="price" data-component="vehicle-search" id="make-model-max-price" name="list_price_max" aria-labelledby="ae-formFieldLabelOptIn_b3r8etky2n7_1"><option value="">No max price</option><option value="2000">$2,000</option><option value="4000">$4,000</option><option value="6000">$6,000</option><option value="8000">$8,000</option><option value="10000">$10,000</option><option value="15000">$15,000</option><option value="20000">$20,000</option><option value="25000">$25,000</option><option value="30000">$30,000</option><option value="35000">$35,000</option><option value="40000">$40,000</option><option value="45000">$45,000</option><option value="50000">$50,000</option><option value="60000">$60,000</option><option value="70000">$70,000</option><option value="80000">$80,000</option><option value="90000">$90,000</option><option value="100000">$100,000</option><option value="125000">$125,000</option><option value="150000">$150,000</option><option value="175000">$175,000</option></select>
+                                <label class="sds-label" for="list_price_max" role="presentation" id="ae-formFieldLabelOptIn_b3r8etky2n7_1">Price</label>
+                                <svg class="sds-text-field__icon" height="16" width="16" role="presentation" aria-hidden="true" tabindex="-1"><use xlink:href="/svg/spritemap-9957805ae2a418ae7507c2b0e074f33e.svg?vsn=d#chevron-down"></use></svg>
+                            </div>
+                        </div>
+
+                        <div class="sds-field sds-home-search__distance">
+                            <div class="sds-input-container sds-input-container--dropdown">
+                                <select class="sds-text-field" data-activitykey="distance" data-component="vehicle-search" id="make-model-maximum-distance" name="maximum_distance" aria-labelledby="ae-formFieldLabelOptIn_b3r8etky2n7_2"><option value="10">10 miles</option><option value="20" selected="">20 miles</option><option value="30">30 miles</option><option value="40">40 miles</option><option value="50">50 miles</option><option value="75">75 miles</option><option value="100">100 miles</option><option value="150">150 miles</option><option value="200">200 miles</option><option value="250">250 miles</option><option value="500">500 miles</option><option value="all">All miles from</option></select>
+                                <label class="sds-label" for="maximum_distance" role="presentation" id="ae-formFieldLabelOptIn_b3r8etky2n7_2">Distance</label>
+                                <svg class="sds-text-field__icon" height="16" width="16" role="presentation" aria-hidden="true" tabindex="-1"><use xlink:href="/svg/spritemap-9957805ae2a418ae7507c2b0e074f33e.svg?vsn=d#chevron-down"></use></svg>
+                            </div>
+                        </div>
+
+                        <div class="sds-field sds-home-search__zip">
+                            <div class="sds-input-container">
+
+
+                                <input aria-label="Enter a Zip Code" class="sds-text-field" data-activitykey="zip" data-component="vehicle-search" id="make-model-zip" maxlength="5" name="zip" onkeyup="this.value=this.value.replace(/[^0-9.]+/g,'')" placeholder=" " type="tel">
+                                <label class="sds-label" for="make-model-zip">ZIP</label>
+                            </div>
+                        </div>
+                        <div class="sds-field sds-home-search__submit">
+                            <button class="sds-button" data-activity-rule-type="page-over-page" data-linkname="search-all-make" data-searchtype="make" type="submit">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form action="/shopping/results/" class="search-form" data-submittype="vehicle-search-bodystyle" method="get">
+                <div class="sds-tabs__section" role="tabpanel" id="by-body-style-tab" aria-labelledby="by-body-style" hidden="">
+                    <div class="sds-field-group sds-field-group--melded sds-home-search__bystyle">
+                        <div class="sds-field sds-home-search__type">
+                            <div class="sds-input-container sds-input-container--dropdown">
+                                <select class="sds-text-field" data-activitykey="stock-type" data-component="vehicle-search-bodystyle" id="bodystyle-search-stocktype" name="stock_type" aria-labelledby="ae-formFieldLabelOptIn_b3r8etky2n7_3"><option value="all">New &amp; used cars</option><option value="new_cpo">New &amp; certified cars</option><option value="new">New cars</option><option value="used">Used cars</option><option value="cpo">Certified cars</option></select>
+                                <label class="sds-label" for="stock_type" role="presentation" id="ae-formFieldLabelOptIn_b3r8etky2n7_3">New/used</label>
+                                <svg class="sds-text-field__icon" height="16" width="16" role="presentation" aria-hidden="true" tabindex="-1"><use xlink:href="/svg/spritemap-9957805ae2a418ae7507c2b0e074f33e.svg?vsn=d#chevron-down"></use></svg>
+                            </div>
+                        </div>
+
+                        <div class="sds-field sds-home-search__style">
+                            <div class="sds-input-container sds-input-container--dropdown">
+                                <select class="sds-text-field" data-activitykey="style" data-component="vehicle-search-bodystyle" id="style" name="body_style_slugs[]"><option value="">All body styles</option><option value="cargo_van">Cargo van</option><option value="convertible">Convertible</option><option value="coupe">Coupe</option><option value="hatchback">Hatchback</option><option value="minivan">Minivan</option><option value="passenger_van">Passenger van</option><option value="pickup_truck">Pickup truck</option><option value="suv">SUV</option><option value="sedan">Sedan</option><option value="wagon">Wagon</option></select>
+                                <label class="sds-label" for="style">Body style</label>
+                                <svg class="sds-text-field__icon" height="16" width="16" role="presentation" aria-hidden="true" tabindex="-1"><use xlink:href="/svg/spritemap-9957805ae2a418ae7507c2b0e074f33e.svg?vsn=d#chevron-down"></use></svg>
+                            </div>
+                        </div>
+
+                        <div class="sds-field sds-home-search__price">
+                            <div class="sds-input-container sds-input-container--dropdown">
+                                <select class="sds-text-field" data-activitykey="price" data-component="vehicle-search-bodystyle" id="bodystyle-max-price" name="list_price_max" aria-labelledby="ae-formFieldLabelOptIn_b3r8etky2n7_4"><option value="">No max price</option><option value="2000">$2,000</option><option value="4000">$4,000</option><option value="6000">$6,000</option><option value="8000">$8,000</option><option value="10000">$10,000</option><option value="15000">$15,000</option><option value="20000">$20,000</option><option value="25000">$25,000</option><option value="30000">$30,000</option><option value="35000">$35,000</option><option value="40000">$40,000</option><option value="45000">$45,000</option><option value="50000">$50,000</option><option value="60000">$60,000</option><option value="70000">$70,000</option><option value="80000">$80,000</option><option value="90000">$90,000</option><option value="100000">$100,000</option><option value="125000">$125,000</option><option value="150000">$150,000</option><option value="175000">$175,000</option></select>
+                                <label class="sds-label" for="list_price_max" role="presentation" id="ae-formFieldLabelOptIn_b3r8etky2n7_4">Price</label>
+                                <svg class="sds-text-field__icon" height="16" width="16" role="presentation" aria-hidden="true" tabindex="-1"><use xlink:href="/svg/spritemap-9957805ae2a418ae7507c2b0e074f33e.svg?vsn=d#chevron-down"></use></svg>
+                            </div>
+                        </div>
+
+                        <div class="sds-field sds-home-search__distance">
+                            <div class="sds-input-container sds-input-container--dropdown">
+                                <select class="sds-text-field" data-activitykey="distance" data-component="vehicle-search-bodystyle" id="bodystyle-maximum-distance" name="maximum_distance" aria-labelledby="ae-formFieldLabelOptIn_b3r8etky2n7_5"><option value="10">10 miles</option><option value="20" selected="">20 miles</option><option value="30">30 miles</option><option value="40">40 miles</option><option value="50">50 miles</option><option value="75">75 miles</option><option value="100">100 miles</option><option value="150">150 miles</option><option value="200">200 miles</option><option value="250">250 miles</option><option value="500">500 miles</option><option value="all">All miles from</option></select>
+                                <label class="sds-label" for="maximum_distance" role="presentation" id="ae-formFieldLabelOptIn_b3r8etky2n7_5">Distance</label>
+                                <svg class="sds-text-field__icon" height="16" width="16" role="presentation" aria-hidden="true" tabindex="-1"><use xlink:href="/svg/spritemap-9957805ae2a418ae7507c2b0e074f33e.svg?vsn=d#chevron-down"></use></svg>
+                            </div>
+                        </div>
+
+                        <div class="sds-field sds-home-search__zip">
+                            <div class="sds-input-container">
+                                <input aria-label="Enter a Zip Code" class="sds-text-field" data-activitykey="zip" data-component="vehicle-search-bodystyle" id="bodystyle-zip" name="zip" placeholder=" " type="tel">
+                                <label class="sds-label" for="bodystyle-zip" role="presentation">ZIP</label>
+                            </div>
+                        </div>
+
+                        <div class="sds-field sds-home-search__submit">
+                            <button class="sds-button" data-activity-rule-type="page-over-page" data-linkname="search-all-bodystyle" data-searchtype="bodystyle" type="submit">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <a class="search-advanced" data-activity-rule-type="page-over-page" data-linkname="search-advanced" data-linktarget="advanced-search" href="/shopping/advanced-search?stock_type=all&amp;makes%5B%5D=hyundai&amp;models%5B%5D=hyundai-palisade&amp;maximum_distance=10&amp;list_price_max=100000">Advanced search</a>
+    <img data-qa="sponsored-search-third-party-url" src="https://ad.doubleclick.net/ddm/trackimp/N9281.272778.CARS.COM/B27239876.328331500;dc_trk_aid=521044322;dc_trk_cid=110301648;ord=351164460;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=?" style="display:none;" alt="" role="presentation" aria-hidden="true" tabindex="-1"><img data-qa="sponsored-search-third-party-url" src="https://tracker.samplicio.us/tracker/ce04538d-971e-4cad-b891-166f289db1a2/pixel.gif?sid=6427&amp;pid=328331500&amp;crid=110301648&amp;device_id=&amp;gdpr=&amp;gdpr_consent=&amp;gdpr_pd=&amp;cachebuster=351164460" style="display:none;"><img data-qa="sponsored-search-third-party-url" src="https://tps.doubleverify.com/visit.jpg?ctx=3212775&amp;cmp=27239876&amp;sid=1497826&amp;plc=328331500&amp;adsrv=1&amp;btreg=&amp;btadsrv=&amp;crt=&amp;tagtype=&amp;dvtagver=6.1.img&amp;" style="display:none;">
+
+    <img data-qa="sponsored-search-primary-imp-url" src="https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsvUzUgyhJJ4g9bjLapl1a67cEw6pZNBRG8ljS-XYAvH9jKVdaOkdKQrirFqyDj8AWxqbUDVZ27qnwitCd8Qgl9_ArZjMSkVFE0z-oQEpJtMkW6UAeWigkCKC0-6MFVzCnsD0J4BBG0b4h_p288jfZTiacN5yKrnQUqLVXViJBFNF74-7a8h61wM_9R3fkcXVBa9OqyOU4aV-E0Quq5F6EX317V-yeQ3qBPGwREvLJTJT7edfAY7gqf1EeIru8rVsDHtlU_k67TiTIrS4VLq07Dy7pvV6qE&amp;sig=Cg0ArKJSzBWQhATm-LtBEAE&amp;uach_m=[UACH]&amp;urlfix=1&amp;adurl=" style="display:none;" alt="" role="presentation" aria-hidden="true" tabindex="-1">
+
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oil Change</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/eproject/OilChange.css"/>
+
+</head>
+<body>
+<header class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"> <span>max</span>wheels </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#vehicles">vehicles</a>
+        <a href="#services">services</a>
+        <a href="#featured">featured</a>
+        <a href="#reviews">reviews</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+    <div id="login-btn">
+        <button class="btn">login</button>
+        <i class="far fa-user"></i>
+    </div>
+
+</header>
+<section>
+    <div class="popup">
+        <div class="item">
+            <img src="images/thaydau1.jpg" width="400"/>
+            <p>Địa chỉ: 428 Lạc Long Quân, Nhật Tân, Tây Hồ, Hà Nội</p>
+        </div>
+        <div class="item">
+            <img src="images/thaydau2.jpg" width="400"/>
+            <p>Địa chỉ: IA20 KĐT Ciputra Phạm Văn Đồng, Bắc Từ Liêm, Hà Nội</p>
+        </div>
+        <div class="item">
+            <img src="images/thaydau3.jpg" width="400"/>
+            <p>Địa chỉ: 107 Trường Lâm, Đức Giang, Long Biên, Hà Nội</p>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/eproject/support.css">
+</head>
+<body>
+<header class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"> <span>max</span>wheels </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#vehicles">vehicles</a>
+        <a href="#services">services</a>
+        <a href="#featured">featured</a>
+        <a href="#reviews">reviews</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+    <div id="login-btn">
+        <button class="btn">login</button>
+        <i class="far fa-user"></i>
+    </div>
+
+</header>
+<section><div class="popup">
+        <div id="banner">
+            <img src="images/banner-home-1.jpg">
+        </div>
+        <div class="row">
+            <ul class="menu">
+                <li class="item"><a href="#"><img class="thumbnail" src="images/anhfacebook.png" width="100"/><h3 class="product-item"> FACEBOOK</h3></a></li>
+                <li class="item"><a href="#"><img class="thumbnail" src="images/anhzalo.png"width="100"/><h3 class="product-item"> ZALO</h3></a></li>
+                <li class="item"><a href="#"><img class="thumbnail" src="images/anhgmail"width="100"/><h3 class="product-item"> EMAIL</h3></a></li>
+                <li class="item"><a href="#"><img class="thumbnail" src="images/Twitter-logo.svg.png"width="100"/><h3 class="product-item">TWITTER</h3></a></li>
+            </ul>
+        </div>
+</section>
+<section class="footer" id="footer">
+    <%- include("footer.ejs") %>
+</section>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
