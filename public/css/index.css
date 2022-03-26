@@ -202,8 +202,13 @@ section{
     padding-top: 10rem;
     text-align: center;
     overflow-x: hidden;
-}
 
+}
+li
+{
+list-style-type: none;
+
+}
 .home h3{
     color:var(--black);
     font-size: 7.5vw;
