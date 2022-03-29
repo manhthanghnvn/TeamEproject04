@@ -1,14 +1,14 @@
 const  express=require('express');
-const app=express();
+const index=express();
 const port= process.env.PORT || 8084;
 
-app.listen(port,function (err){
+index.listen(port,function (err){
     console.log('Serve is running. localhost:8084');
 });
 
-app.use(express.static('public'));
-app.set('view engine','ejs');
-app.set('views','./views');
+index.use(express.static('public'));
+index.set('view engine','ejs');
+index.set('views','./views');
 
 // app.use('/users', userRoute);
 var mysql=require('mysql');
@@ -73,7 +73,7 @@ handleDisconnect();
 
 
 
-app.get("/", function (req,res){
+index.get("/", function (req, res){
     var tv=" select * from Products";
     conn.query(tv,function (err,rs){
         if(err) console.log(err)
@@ -84,7 +84,7 @@ app.get("/", function (req,res){
         }
     })
 });
-app.get("/Vehicles", function (req,res){
+index.get("/Vehicles", function (req, res){
     var tv="SELECT * FROM `Products`";
     conn.query(tv,function (err,rs){
         if(err) console.log(err)
@@ -97,7 +97,7 @@ app.get("/Vehicles", function (req,res){
     })
 });
 
-app.get("/Services", function (req,res){
+index.get("/Services", function (req, res){
     var tv=" select * from Products";
     conn.query(tv,function (err,rs){
         if(err) console.log(err)
@@ -108,7 +108,7 @@ app.get("/Services", function (req,res){
         }
     })
 });
-app.get("/featured", function (req,res){
+index.get("/featured", function (req, res){
     var tv="SELECT * FROM `Products`";
     conn.query(tv,function (err,rs){
         if(err) console.log(err)
@@ -120,7 +120,7 @@ app.get("/featured", function (req,res){
     })
 });
 
-app.get("/detail-product", function (req,res){
+index.get("/detail-product", function (req, res){
     var tv=" select * from Products";
     conn.query(tv,function (err,rs){
         if(err) console.log(err)
@@ -133,7 +133,7 @@ app.get("/detail-product", function (req,res){
 });
 
 
-app.get("/Contact", function (req,res){
+index.get("/Contact", function (req, res){
 
             res.render('Contact')
 
@@ -141,10 +141,10 @@ app.get("/Contact", function (req,res){
 });
 
 
-app.get("/Reviews", function (req,res){
+index.get("/Reviews", function (req, res){
     res.render('Reviews');
 });
-app.get("/searchResult",function (req,res){
+index.get("/searchResult",function (req, res){
     var param=req.query.nameProduct;
     console.log(param);
     let tv="select * from  Products where nameProduct like '%"+param+"%'";
@@ -157,26 +157,26 @@ app.get("/searchResult",function (req,res){
         }
     })
 })
-app.get("/247Support", function (req,res){
+index.get("/247Support", function (req, res){
     res.render('247Support')
 });
-app.get("/BatteryReplacement", function (req,res){
+index.get("/BatteryReplacement", function (req, res){
     res.render('BatteryReplacement')
 });
-app.get("/Carinsurance", function (req,res){
+index.get("/Carinsurance", function (req, res){
     res.render('Carinsurance')
 });
-app.get("/oilchange", function (req,res){
+index.get("/oilchange", function (req, res){
     res.render('oilchange')
 });
-app.get("/PartsRepair", function (req,res){
+index.get("/PartsRepair", function (req, res){
     res.render('PartsRepair')
 });
 
-app.get("/deposit", function (req,res){
+index.get("/deposit", function (req, res){
     res.render('deposit')
 });
-app.get("/product-detail/:ID", function (req,res){
+index.get("/product-detail/:ID", function (req, res){
     var ID=req.params.ID;
     console.log(ID)
     var tv=" select * from Products where ID="+ID+"";
