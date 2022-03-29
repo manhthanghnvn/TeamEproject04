@@ -129,4 +129,13 @@ var swiper = new Swiper(".review-slider", {
             slidesPerView: 3,
         },
     },
+
+});
+var cmy=document.querySelectorAll('.convertMoney');
+var convert= new Intl.NumberFormat('en-US',{
+    style:'currency',
+    currency:'USD'
+});
+cmy.forEach(function (element){
+    element.innerHTML=convert.format(element.innerHTML);
 });

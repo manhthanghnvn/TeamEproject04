@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include("header.ejs") %>
+<!--    <%- include("header.ejs") %>-->
 </head>
 <body>
 
@@ -9,7 +9,7 @@
     <div class="container">
         <h1>Xin chao các bạn</h1>
         <div class="col-md-3">
-            <form action="/tin-tuc" method="get">
+            <form action="/demo" method="get">
                 <input class="form-control" type="text" name="nameProduct" />
                 <button type="submit" class="btn btn-primary">Search</button>
             </form>
@@ -27,7 +27,7 @@
                     <% }else{ %>
                         <b><%= products[i].buyNow %></b>
                     <% }%>
-                </li>
+            </li>
         <%    }  %>
     </ul>
 

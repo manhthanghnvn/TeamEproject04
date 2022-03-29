@@ -1,0 +1,181 @@
+
+<%-include("header.ejs") %>
+
+<%-include("login.ejs")%>
+<body>
+<section class="detail" id="detail">
+
+        <img src="<%=Products.img1%>" alt="">
+        <div class="content">
+            <h3><%=Products.nameProduct%></h3>
+            <div class="price"> <span>price : </span> $<%=Products.buyNow%>/- </div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> 98mph
+            </p>
+            <a href="/product-detail" class="btn"></a>
+        </div>
+
+    <div class="card">
+        <img src="<%=Products.img1%>"  style="width:100%">
+        <h1>FADIL</h1>
+        <p class="price">$29,000</p>
+        <p></p>
+        <p>  <a href="/deposit" class="btn">DEPOSIT NOW</a></p>
+    </div>
+
+</section>
+
+<section class="detail2" id="detail2">
+
+    <h2>EXTERIOR</h2>
+    <br/>
+    <p>The European design blends well with the distinctive highlights of the Vietnamese spirit to create an ideal Hatchback for urban, which is compact and smart, ready to conquer all the roads in the city streets.</p>
+    <br/>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <h3>ENGINE</h3>
+                <p>1.4L</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>CAPACITY OF</h3>
+                <p>98 HP</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>TRANSMISSION</h3>
+                <p>CVT</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>EXCELLENT</h3>
+                <p>SAFETY SYSTEM</p>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <h2>INTERIOR</h2>
+    <br/>
+    <p>Fadil model has a comfortable seating area with an integrated multi-utility system for the most dynamic and flexible experience.</p>
+    <br/>
+    <div class="row">
+        <div class="column3">
+            <div class="card">
+                <h3>Convenient equipment</h3>
+                <p>Bluetooth connectivity, hands-free talk, automatic control with humidity sensor bring the most convenient space for the owner.</p>
+            </div>
+        </div>
+
+        <div class="column3">
+            <div class="card">
+                <h3>7-inch screen</h3>
+                <p>7-inch entertainment screen with available connection to smartphones and a 6-speaker sound system for premium entertainment experience.</p>
+            </div>
+        </div>
+
+        <div class="column3 ">
+            <div class="card">
+                <h3>Leather-covered</h3>
+                <p>Leather-covered interior space and a spacious luggage compartment for great comfort in all trips.</p>
+            </div>
+        </div>
+
+    </div>
+    <br/>
+    <h2>VEHICLE SPECIFICATIONS</h2>
+    <br/>
+
+    <div class="row">
+        <div class="column2">
+            <div class="card">
+                <h3>Length x Width x Height</h3>
+                <p>3676 x 1632 x 1495 (mm)</p>
+            </div>
+        </div>
+
+        <div class="column2">
+            <div class="card">
+                <h3>Wheelbase</h3>
+                <p>2385 (mm)</p>
+            </div>
+        </div>
+
+        <div class="column2">
+            <div class="card">
+                <h3>Ground clearance</h3>
+                <p>150 (mm)</p>
+            </div>
+        </div>
+
+        <div class="column2">
+            <div class="card">
+                <h3>Fuel tank capacity</h3>
+                <p>32 (L)</p>
+            </div>
+        </div>
+
+        <div class="column2">
+            <div class="card">
+                <h3>Fuel consumption</h3>
+                <p>Combined Test: 5.85 (liter/100km) </br>
+                    Urban: 7.11 (liter/100km)</br>
+                    Extra urban: 5.11 (liter/100km).</p>
+            </div>
+        </div>
+
+        <div class="column2">
+            <div class="card">
+                <h3>Engine</h3>
+                <p>1.4L</p>
+            </div>
+        </div>
+
+        <div class="column2">
+            <div class="card">
+                <h3>Maximum power</h3>
+                <p>98 HP</p>
+            </div>
+        </div>
+
+        <div class="column2">
+            <div class="card">
+                <h3>Maximum torque</h3>
+                <p>128 Nm</p>
+            </div>
+        </div>
+
+        <div class="column2">
+            <div class="card">
+                <h3>Transmission</h3>
+                <p>Continuously variable transmission (CVT)</p>
+            </div>
+        </div>
+
+        <div class="column2">
+            <div class="card">
+                <h3>Drive</h3>
+                <p>Front Wheel Drive</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<%- include("footer.ejs") %>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>

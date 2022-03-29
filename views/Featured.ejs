@@ -1,15 +1,24 @@
+
+<%-include("header.ejs") %>
+
+<%-include("login.ejs")%>
+<body>
+<section class="home" id="home">
+
+
+</section>
 <section class="featured" id="featured">
 
     <h1 class="heading"> <span>featured</span> cars </h1>
-    <h2><span><%=Products[12].nameProduct%></span></h2>
+    <h2><span>Gasoline Engine</span></h2>
     <div class="swiper featured-slider">
 
         <div class="swiper-wrapper">
-
+            <%for(var i=0;4<i && i<6;i++){%>
             <div class="swiper-slide box">
-                <img src="<%=Products[12].img1%>" alt="">
+                <img src="<%=Products[i].img1%>" alt="">
                 <div class="content">
-                    <h3><%=Products[12].nameProduct%></h3>
+                    <h3><%=Products[i].nameProduct%></h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -17,73 +26,24 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <div class="price">$<%=Products[12].buyNow%></div>
-                    <a href="#" class="btn">DEPOSIT NOW</a>
+                    <div class="price">$<%=Products[i].buyNow%></div>
+                    <a href="/product-detail/<%=Products[i].ID%>" class="btn">DEPOSIT NOW</a>
                 </div>
             </div>
-
-            <div class="swiper-slide box">
-                <img src="image/luxa2.0.2.png" alt="">
-                <div class="content">
-                    <h3>LUX A2.0</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="price">$42,000/-</div>
-                    <a href="#" class="btn">DEPOSIT NOW</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="image/luxsa2.0.2.png" alt="">
-                <div class="content">
-                    <h3>LUX SA2.0</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="price">$52,000/-</div>
-                    <a href="#" class="btn">DEPOSIT NOW</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="image/president2.png" alt="">
-                <div class="content">
-                    <h3>PRESIDENT</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="price">$159,000/-</div>
-                    <a href="#" class="btn">DEPOSIT NOW</a>
-                </div>
-            </div>
+<%}%>
 
         </div>
-
         <div class="swiper-pagination"></div>
-
     </div>
     <h2><span>Electric motor</span></h2>
     <div class="swiper featured-slider">
 
         <div class="swiper-wrapper">
-
+            <%for(var i=0;i<7;i++){%>
             <div class="swiper-slide box">
-                <img src="image/vfe34.jpg" alt="">
+                <img src="<%=Products[i].img1%>" alt="">
                 <div class="content">
-                    <h3>VFe34</h3>
+                    <h3><%=Products[i].nameProduct%></h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -91,63 +51,37 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <div class="price">$29,000/-</div>
-                    <a href="#" class="btn">DEPOSIT NOW</a>
+                    <div class="price">$<%=Products[i].buyNow%></div>
+                    <a href="/product-detail/<%=Products[i].ID%>" class="btn">DEPOSIT NOW</a>
                 </div>
             </div>
 
-            <div class="swiper-slide box">
-                <img src="image/vf8.png" alt="">
-                <div class="content">
-                    <h3>VF8</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="price">$45,000/-</div>
-                    <a href="#" class="btn">DEPOSIT NOW</a>
-                </div>
-            </div>
+<%}%>
 
-            <div class="swiper-slide box">
-                <img src="image/vf92.png" alt="">
-                <div class="content">
-                    <h3>VF9</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="price">$61,000/-</div>
-                    <a href="#" class="btn">DEPOSIT NOW</a>
-                </div>
-            </div>
 
-            <!--            <div class="swiper-slide box">
-                            <img src="image/car-8.png" alt="">
-                            <div class="content">
-                                <h3>new model</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="price">$55,000/-</div>
-                                <a href="#" class="btn">DEPOSIT NOW</a>
-                            </div>
-                        </div>-->
-
-        </div>
 
         <div class="swiper-pagination"></div>
 
     </div>
 
 </section>
+
+<section class="newsletter">
+
+    <h3>subscribe for latest updates</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, suscipit.</p>
+
+    <form action="">
+        <input type="email" placeholder="enter your email">
+        <input type="submit" value="subscribe">
+    </form>
+
+</section>
+
+<%- include("footer.ejs") %>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>

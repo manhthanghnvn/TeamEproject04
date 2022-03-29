@@ -8,14 +8,14 @@
 </section>
 <section class="vehicles" id="vehicles" >
 
-    <h1 class="heading"> popular <span>vehicles</span> </h1>
+    <h1 class="heading"> Search  <span>Result</span> </h1>
 
     <div class="swiper vehicles-slider">
 
         <div class="swiper-wrapper">
-            <%for(var i=0;i<4;i++){%>
+            <%for(var i=0;i<Products.length;i++){%>
             <div class="swiper-slide box">
-                <img src="<%=Products[i].img1%>" alt="hoat">
+                <img src="<%=Products[i].img1%>" alt="">
                 <div class="content">
                     <h3><%=Products[i].nameProduct%></h3>
                     <div class="price"> <span>price : </span> $<%=Products[i].buyNow%>/- </div>
@@ -30,7 +30,6 @@
                 </div>
             </div>
             <%}%>
-
 
         </div>
 

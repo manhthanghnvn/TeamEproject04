@@ -1,4 +1,6 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
 :root{
     --yellow:#f9d806;
     --light-yellow:#ffee80;
@@ -201,13 +203,8 @@ section{
     padding-top: 10rem;
     text-align: center;
     overflow-x: hidden;
-
 }
-li
-{
-list-style-type: none;
 
-}
 .home h3{
     color:var(--black);
     font-size: 7.5vw;
@@ -573,12 +570,12 @@ list-style-type: none;
 
 .footer{
     background: var(--light-yellow);
-    padding-bottom: 2rem;
+    padding-bottom: 8rem;
 }
 
 .footer .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(5rem, 0.5fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap:1.5rem;
 }
 
@@ -607,7 +604,7 @@ list-style-type: none;
 .footer .credit{
     text-align: center;
     padding:1.5rem;
-    padding-top: 1.5rem;
+    padding-top: 2.5rem;
     margin-top: 2rem;
     border-top: var(--border);
     font-size: 2rem;
@@ -685,12 +682,89 @@ list-style-type: none;
     }
 
 }
-.btn-primary{
-    right: 500px;
-}
-#video-vinfast-banner{
-    width: 2200px;
-    height: 900px;
-    padding-left: 10%;
 
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: black   ;
+    background-color: var(--yellow);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+.detail{
+    padding-top: 120px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+.column3 {
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+}
+.column2 {
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
 }
