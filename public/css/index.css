@@ -688,9 +688,8 @@ list-style-type: none;
 .btn-primary{
     right: 500px;
 }
-#video-vinfast-banner{
-    width: 2200px;
-    height: 900px;
-    padding-left: 10%;
-
+#block-newhome-videotop video, #block-newhome-videomiddle video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
